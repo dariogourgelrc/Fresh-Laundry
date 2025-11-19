@@ -214,16 +214,6 @@
       if (!valid) return;
 
       const payload = { name, email, phone, type, message, page: 'contact' };
-      // AJAX submit demo to httpbin (replace with real endpoint when available)
-      fetch('https://httpbin.org/post', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      }).catch(function() { /* ignore network errors for demo */ });
-
-      const $result = $('#contactResult');
-      $result.html('<div class="success-message">Thanks! Your message has been prepared. Use the button below to send the email.</div>');
-
       const subject = encodeURIComponent(`Contact - ${type} from ${name}`);
       const bodyLines = [
         `Name: ${name}`,
@@ -235,8 +225,29 @@
       ];
       const body = encodeURIComponent(bodyLines.join('\n'));
       const mailtoHref = `mailto:info@freshwavelaundry.co.za?subject=${subject}&body=${body}`;
-      $('#composeEmail').attr('href', mailtoHref);
-      $('#composeWrap').show();
+      const $result = $('#contactResult');
+
+      // AJAX submit demo to httpbin (replace with real endpoint when available)
+      fetch('https://httpbin.org/post', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(function() {
+        $result.html('<div class="success-message">Thanks! Your message has been prepared. Use the button below to send the email.</div>');
+        $('#composeEmail').attr('href', mailtoHref);
+        $('#composeWrap').show();
+      })
+      .catch(function() {
+        $result.html('<div class="error-message">Sorry, we couldn’t send your message right now. You can still click the button below to compose an email with your details.</div>');
+        $('#composeEmail').attr('href', mailtoHref);
+        $('#composeWrap').show();
+      });
+    });
+
+    // Light real-time error clearing on input/change
+    $contactForm.find('input, select, textarea').on('input blur change', function() {
+      $(this).closest('.form-group').find('.error-message').remove();
     });
   }
 
@@ -289,6 +300,8 @@
     $bookingForm.on('submit', function(e) {
       e.preventDefault();
       const $f = $(this);
+      // Clear any previous errors
+      clearErrors($f);
       // Collect basic fields
       const name = ($('#name').val() || '').trim();
       const email = ($('#email').val() || '').trim();
@@ -296,6 +309,23 @@
       const service = ($('input[name="service"]:checked').val() || '').trim();
       const date = ($('#date').val() || '').trim();
       const time = ($('#time').val() || '').trim();
+
+      // Basic validations
+      let valid = true;
+      if (!name || name.length < 2) { showError($('#name'), 'Please enter your full name.'); valid = false; }
+      if (!validateEmail(email)) { showError($('#email'), 'Enter a valid email address.'); valid = false; }
+      if (!validatePhone(phone)) { showError($('#numero'), 'Enter a valid phone number.'); valid = false; }
+      if (!service) { showError($('input[name="service"]').first(), 'Please select a service.'); valid = false; }
+      if (!date) { showError($('#date'), 'Please choose a date.'); valid = false; }
+      if (!time) { showError($('#time'), 'Please choose a time.'); valid = false; }
+      // Optional: prevent past dates
+      if (date) {
+        const chosen = new Date(date);
+        const today = new Date(); today.setHours(0,0,0,0);
+        if (chosen < today) { showError($('#date'), 'Date cannot be in the past.'); valid = false; }
+      }
+
+      if (!valid) return;
 
       // Build a friendly service label
       const svcLabelMap = {
@@ -326,6 +356,53 @@
       } else {
         alert('Thanks! We received your booking and will contact you shortly.');
       }
+    });
+  }
+  
+  // TRACKING FORM
+  const $trackingForm = $('#trackingForm');
+  if ($trackingForm.length) {
+    $trackingForm.on('submit', function(e) {
+      e.preventDefault();
+      const $f = $(this);
+      clearErrors($f);
+      const order = ($('#trkOrder').val() || '').trim();
+      const email = ($('#trkEmail').val() || '').trim();
+
+      let valid = true;
+      const orderOk = /^FW\d{7,}$/.test(order);
+      if (!orderOk) { showError($('#trkOrder'), 'Enter a valid order code like FW2024001.'); valid = false; }
+      if (email && !validateEmail(email)) { showError($('#trkEmail'), 'Enter a valid email address or leave blank.'); valid = false; }
+      if (!valid) return;
+
+      // Demo: determine a pseudo status from order digits
+      const digits = (order.match(/\d+/) || ['0'])[0];
+      const n = parseInt(digits.slice(-2) || '0', 10);
+      const statuses = ['Processing', 'Out for delivery', 'Completed'];
+      const status = statuses[n % statuses.length];
+
+      const payload = { order, email, status, page: 'tracking' };
+      const $result = $('#trackingResult');
+      fetch('https://httpbin.org/post', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(function() {
+        $result.html(
+          `<div class="success-message">Order <strong>${order}</strong> status: <strong>${status}</strong>${email ? `. Updates will be sent to ${email}.` : '.'}</div>`
+        );
+      })
+      .catch(function() {
+        $result.html(
+          `<div class="error-message">We couldn’t reach the server. Showing the latest known status for <strong>${order}</strong>: <strong>${status}</strong>. If this looks wrong, please contact <a href="mailto:info@freshwavelaundry.co.za">support</a>.</div>`
+        );
+      });
+    });
+
+    // Light real-time error clearing on input/change
+    $trackingForm.find('input').on('input blur change', function() {
+      $(this).closest('.form-group').find('.error-message').remove();
     });
   }
 }); })();

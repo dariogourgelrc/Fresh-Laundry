@@ -52,10 +52,10 @@
 
     <div class="booking-container">
         <h1 class="booking-title">Book Your Service</h1>
-        <form class="booking-form" action="">
+        <form class="booking-form" action="" novalidate>
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required minlength="2" placeholder="e.g., Jane Doe">
             </div>
             
             <div class="form-group">
@@ -65,7 +65,7 @@
             
             <div class="form-group">
                 <label for="numero">Phone Number</label>
-                <input type="number" id="numero" name="numero" required>
+                <input type="tel" id="numero" name="numero" required placeholder="e.g., +27 82 123 4567">
             </div>
             
             <div class="form-group">

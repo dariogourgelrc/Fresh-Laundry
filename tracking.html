@@ -53,10 +53,19 @@
     <div class="tracking-container">
         <h1 class="tracking-title">Track Your Order</h1>
         <p class="tracking-description">Enter your order code to check the status</p>
-        <div class="tracking-form">
-            <input type="text" id="ordernumber" name="ordernumber" class="tracking-input" placeholder="Enter order code (e.g. FW2024001)">
-            <button class="tracking-btn">CHECK STATUS</button>
-        </div>
+
+        <form id="trackingForm" class="booking-form" novalidate>
+            <div class="form-group">
+                <label for="trkOrder">Order Code</label>
+                <input type="text" id="trkOrder" name="order" placeholder="e.g., FW2024001" required minlength="9">
+            </div>
+            <div class="form-group">
+                <label for="trkEmail">Email (optional)</label>
+                <input type="email" id="trkEmail" name="email" placeholder="e.g., you@example.com">
+            </div>
+            <input type="submit" value="Check Status" class="submit-btn">
+            <div id="trackingResult" aria-live="polite" style="margin-top: 12px;"></div>
+        </form>
     </div>
     
     <footer>
