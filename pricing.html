@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transparent Fresh Wave Laundry pricing for wash & fold, dry cleaning, ironing, and delivery options.">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Laundry Pricing, Wash and Fold Prices, Dry Cleaning Prices, Ironing Prices, Cape Town Laundry">
+    <title>Pricing - Fresh Wave Laundry</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="canonical" href="https://freshwavelaundry.com/pricing.html">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+    <meta property="og:title" content="Pricing - Fresh Wave Laundry">
+    <meta property="og:description" content="See prices for wash & fold, dry cleaning, ironing, and delivery services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://freshwavelaundry.com/pricing.html">
+    <meta property="og:image" content="https://freshwavelaundry.com/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pricing - Fresh Wave Laundry">
+    <meta name="twitter:description" content="Transparent laundry pricing in Cape Town for all services.">
+    <meta name="twitter:image" content="https://freshwavelaundry.com/images/logo.png">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer crossorigin="anonymous"></script>
+    <script src="./js/script.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Fresh Wave Laundry Pricing",
+      "url": "https://freshwavelaundry.com/pricing.html",
+      "description": "Transparent pricing for wash & fold, dry cleaning, ironing, and delivery services."
+    }
+    </script>
+</head>
+<body>
+    <header>
+            <img src="./images/logo.png" alt="logo" class="header-logo" width="200px" loading="lazy" decoding="async">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="booknow.html">Book Now</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+        </nav>
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
+    <div class="pricing-container">
+        <h1 class="pricing-title">Our Prices</h1>
+        <div class="pricing-tabs" role="region" aria-label="Pricing categories">
+            <div class="tab-list" role="tablist" aria-label="Service categories">
+                <button class="tab-button active" role="tab" aria-selected="true" data-tab="wash">Wash &amp; Fold</button>
+                <button class="tab-button" role="tab" aria-selected="false" data-tab="dry">Dry Cleaning</button>
+                <button class="tab-button" role="tab" aria-selected="false" data-tab="iron">Ironing</button>
+                <button class="tab-button" role="tab" aria-selected="false" data-tab="delivery">Collection &amp; Delivery</button>
+                <button class="tab-button" role="tab" aria-selected="false" data-tab="bedding">Bedding</button>
+                <button class="tab-button" role="tab" aria-selected="false" data-tab="eco">Eco-Friendly Options</button>
+            </div>
+
+            <div class="tab-panels">
+                <div class="tab-panel active" id="tab-wash" role="tabpanel">
+                    <h2>Wash &amp; Fold</h2>
+                    <p class="price">ZAR 45.00/kg</p>
+                    <p class="note">Includes detergent and fabric softener.</p>
+                </div>
+                <div class="tab-panel" id="tab-dry" role="tabpanel" aria-hidden="true">
+                    <h2>Dry Cleaning</h2>
+                    <p class="price">ZAR 75.00/item</p>
+                    <p class="note">Professional cleaning for delicate garments.</p>
+                </div>
+                <div class="tab-panel" id="tab-iron" role="tabpanel" aria-hidden="true">
+                    <h2>Ironing</h2>
+                    <p class="price">ZAR 25.00/item</p>
+                    <p class="note">Pressed and ready-to-wear finishing.</p>
+                </div>
+                <div class="tab-panel" id="tab-delivery" role="tabpanel" aria-hidden="true">
+                    <h2>Collection &amp; Delivery</h2>
+                    <p class="price">ZAR 30.00</p>
+                    <p class="note">Convenient pickup and drop-off service.</p>
+                </div>
+                <div class="tab-panel" id="tab-bedding" role="tabpanel" aria-hidden="true">
+                    <h2>Bedding</h2>
+                    <p class="price">ZAR 60.00/set</p>
+                    <p class="note">Duvet covers, pillowcases, and sheets.</p>
+                </div>
+                <div class="tab-panel" id="tab-eco" role="tabpanel" aria-hidden="true">
+                    <h2>Eco-Friendly Options</h2>
+                    <p class="price">ZAR 55.00/kg</p>
+                    <p class="note">Gentle, sustainable products with reduced impact.</p>
+                </div>
+            </div>
+        </div>
+        <div class="pricing-action">
+            <a href="booknow.html" class="btn-book-now-pricing">BOOK NOW</a>
+        </div>
+        <div class="pricing-info">
+            <p>All prices are valid for the metropolitan area. For other locations, please consult our team.</p>
+            <p>We offer special discounts for corporate clients and bulk orders.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Copyright @ 2023 Fresh Wave</p>
+    </footer>
+</body>
+</html>

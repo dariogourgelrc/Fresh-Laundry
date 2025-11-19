@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Fresh Wave Laundry services: wash & fold, dry cleaning, ironing, carpet and curtain cleaning, plus express options.">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Laundry Services, Wash and Fold, Dry Cleaning, Ironing, Carpet Cleaning, Curtain Cleaning, Express Laundry, Cape Town">
+    <title>Fresh Wave Laundry - Our Services</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="canonical" href="https://freshwavelaundry.com/services.html">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+    <meta property="og:title" content="Fresh Wave Laundry - Our Services">
+    <meta property="og:description" content="Explore wash & fold, dry cleaning, ironing, carpet and curtain cleaning, and express services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://freshwavelaundry.com/services.html">
+    <meta property="og:image" content="https://freshwavelaundry.com/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fresh Wave Laundry - Our Services">
+    <meta name="twitter:description" content="Laundry services in Cape Town: wash & fold, dry cleaning, ironing, and more.">
+    <meta name="twitter:image" content="https://freshwavelaundry.com/images/logo.png">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer crossorigin="anonymous"></script>
+    <script src="./js/script.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Fresh Wave Laundry Services",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Wash & Fold","url":"https://freshwavelaundry.com/pricing.html#wash"},
+        {"@type":"ListItem","position":2,"name":"Dry Cleaning","url":"https://freshwavelaundry.com/pricing.html#dry"},
+        {"@type":"ListItem","position":3,"name":"Ironing","url":"https://freshwavelaundry.com/pricing.html#iron"},
+        {"@type":"ListItem","position":4,"name":"Collection & Delivery","url":"https://freshwavelaundry.com/pricing.html#delivery"},
+        {"@type":"ListItem","position":5,"name":"Bedding","url":"https://freshwavelaundry.com/pricing.html#bedding"}
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header>
+            <img src="./images/logo.png" alt="logo" class="header-logo" width="200px" loading="lazy" decoding="async">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="booknow.html">Book Now</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+        </nav>
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
+    <div class="services-container">
+        <h1 class="services-title">Our Services</h1>
+        <div class="services-controls" aria-label="Services filters and sorting">
+            <input type="text" id="services-search" class="services-search" placeholder="Search services..." aria-label="Search services by name or tag" />
+            <select id="services-filter" class="services-filter" aria-label="Filter by category">
+                <option value="">All categories</option>
+                <option value="Laundry">Laundry</option>
+                <option value="Dry Cleaning">Dry Cleaning</option>
+                <option value="Ironing">Ironing</option>
+                <option value="Logistics">Logistics</option>
+            </select>
+            <select id="services-sort" class="services-sort" aria-label="Sort services">
+                <option value="name-asc">Name A–Z</option>
+                <option value="price-asc">Price Low–High</option>
+                <option value="price-desc">Price High–Low</option>
+            </select>
+        </div>
+        <div class="services-grid" id="services-list">
+            <div class="service-box">
+                <div class="service-image">
+            <img src="./images/washfold.jpeg" alt="Wash and Fold" class="lightbox" loading="lazy" decoding="async">
+                </div>
+                <div class="service-content">
+                    <h3>Wash and Fold</h3>
+                    <p>Complete washing and folding service for your clothes with special care and quality products.</p>
+                    <div class="service-buttons">
+                        <a href="pricing.html" class="btn-view-prices">VIEW PRICES</a>
+                        <a href="booknow.html" class="btn-book-now">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-box">
+                <div class="service-image">
+            <img src="./images/drycleaning.webp" alt="Dry Cleaning" class="lightbox" loading="lazy" decoding="async">
+                </div>
+                <div class="service-content">
+                    <h3>Dry Cleaning</h3>
+                    <p>Professional cleaning for delicate garments that require special care without the use of water.</p>
+                    <div class="service-buttons">
+                        <a href="pricing.html" class="btn-view-prices">VIEW PRICES</a>
+                        <a href="booknow.html" class="btn-book-now">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-box">
+                <div class="service-image">
+            <img src="./images/ironing.jpg" alt="Ironing" class="lightbox" loading="lazy" decoding="async">
+                </div>
+                <div class="service-content">
+                    <h3>Ironing</h3>
+                    <p>Professional ironing service to leave your clothes impeccable and ready to wear.</p>
+                    <div class="service-buttons">
+                        <a href="pricing.html" class="btn-view-prices">VIEW PRICES</a>
+                        <a href="booknow.html" class="btn-book-now">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-box">
+                <div class="service-image">
+            <img src="./images/carpet.png" alt="Carpet Cleaning" class="lightbox" loading="lazy" decoding="async">
+                </div>
+                <div class="service-content">
+                    <h3>Carpet Cleaning</h3>
+                    <p>Specialized cleaning for rugs and carpets, removing tough stains and odors.</p>
+                    <div class="service-buttons">
+                        <a href="pricing.html" class="btn-view-prices">VIEW PRICES</a>
+                        <a href="booknow.html" class="btn-book-now">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-box">
+                <div class="service-image">
+            <img src="./images/curtain.png" alt="Curtain Cleaning" class="lightbox" loading="lazy" decoding="async">
+                </div>
+                <div class="service-content">
+                    <h3>Curtain Cleaning</h3>
+                    <p>Specialized service for curtain cleaning, maintaining the beauty and durability of the fabric.</p>
+                    <div class="service-buttons">
+                        <a href="pricing.html" class="btn-view-prices">VIEW PRICES</a>
+                        <a href="booknow.html" class="btn-book-now">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-box">
+                <div class="service-image">
+            <img src="./images/logo.png" alt="Express Service" class="lightbox" loading="lazy" decoding="async">
+                </div>
+                <div class="service-content">
+                    <h3>Express Service</h3>
+                    <p>Quick washing for when you need your clothes cleaned urgently, within 24 hours.</p>
+                    <div class="service-buttons">
+                        <a href="pricing.html" class="btn-view-prices">VIEW PRICES</a>
+                        <a href="booknow.html" class="btn-book-now">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Copyright @ 2023 Fresh Wave</p>
+    </footer>
+</body>
+</html>

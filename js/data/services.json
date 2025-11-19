@@ -1,0 +1,62 @@
+[
+  {
+    "id": "wash_fold",
+    "name": "Wash & Fold",
+    "description": "Convenient everyday laundry service with careful wash and crisp fold.",
+    "price": 45,
+    "unit": "kg",
+    "category": "Laundry",
+    "image": "./images/washfold.jpeg",
+    "tags": ["wash", "fold", "laundry", "everyday"]
+  },
+  {
+    "id": "dry_cleaning",
+    "name": "Dry Cleaning",
+    "description": "Professional dry cleaning for delicate garments and special fabrics.",
+    "price": 75,
+    "unit": "item",
+    "category": "Dry Cleaning",
+    "image": "./images/drycleaning.webp",
+    "tags": ["dry", "cleaning", "delicate", "garments"]
+  },
+  {
+    "id": "ironing",
+    "name": "Ironing",
+    "description": "Precise ironing service to keep your clothes neat and wrinkle-free.",
+    "price": 25,
+    "unit": "item",
+    "category": "Ironing",
+    "image": "./images/ironing.jpg",
+    "tags": ["iron", "press", "wrinkle"]
+  },
+  {
+    "id": "collection_delivery",
+    "name": "Collection & Delivery",
+    "description": "Door-to-door pickup and delivery for maximum convenience.",
+    "price": 30,
+    "unit": "service",
+    "category": "Logistics",
+    "image": "./images/delivery.png",
+    "tags": ["pickup", "delivery", "door-to-door"]
+  },
+  {
+    "id": "bedding",
+    "name": "Bedding",
+    "description": "Premium wash and care for sheets, duvets, and bedding sets.",
+    "price": 60,
+    "unit": "set",
+    "category": "Laundry",
+    "image": "./images/logo.png",
+    "tags": ["bedding", "duvet", "sheets"]
+  },
+  {
+    "id": "eco_friendly",
+    "name": "Eco-Friendly Options",
+    "description": "Sustainable detergents and methods for a greener clean.",
+    "price": 55,
+    "unit": "kg",
+    "category": "Laundry",
+    "image": "./images/logo.png",
+    "tags": ["eco", "green", "sustainable"]
+  }
+]

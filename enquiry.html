@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit an enquiry about Fresh Wave Laundry services, products, volunteering, or sponsorship.">
+    <meta name="robots" content="index,follow">
+    <title>Fresh Wave Laundry - Enquiry</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="canonical" href="https://freshwavelaundry.com/enquiry.html">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+    <meta property="og:title" content="Enquiry - Fresh Wave Laundry">
+    <meta property="og:description" content="Ask about services, products, volunteering, or sponsorship.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://freshwavelaundry.com/enquiry.html">
+    <meta property="og:image" content="https://freshwavelaundry.com/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Enquiry - Fresh Wave Laundry">
+    <meta name="twitter:description" content="Submit your enquiry and we’ll respond promptly.">
+    <meta name="twitter:image" content="https://freshwavelaundry.com/images/logo.png">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer crossorigin="anonymous"></script>
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <header>
+            <img src="./images/logo.png" alt="logo" class="header-logo" width="200px" loading="lazy" decoding="async">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="booknow.html">Book Now</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+        </nav>
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
+    <div class="booking-container">
+        <h1 class="booking-title">Submit an Enquiry</h1>
+        <form id="enquiryForm" class="booking-form" novalidate>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="enqName">Full Name</label>
+                    <input type="text" id="enqName" name="name" placeholder="e.g., Jane Doe" required minlength="2">
+                </div>
+                <div class="form-group">
+                    <label for="enqEmail">Email</label>
+                    <input type="email" id="enqEmail" name="email" placeholder="e.g., jane@example.com" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="enqPhone">Phone Number</label>
+                    <input type="tel" id="enqPhone" name="phone" placeholder="e.g., +27 82 123 4567" required>
+                </div>
+                <div class="form-group">
+                    <label for="enqType">Enquiry Type</label>
+                    <select id="enqType" name="type" required>
+                        <option value="">Select a type</option>
+                        <option value="service">Service enquiry</option>
+                        <option value="product">Product enquiry</option>
+                        <option value="volunteer">Volunteer</option>
+                        <option value="sponsor">Sponsor</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="enqSubject">Subject</label>
+                    <input type="text" id="enqSubject" name="subject" placeholder="e.g., Wash & Fold availability" required>
+                </div>
+                <div class="form-group">
+                    <label for="enqDate">Preferred Date</label>
+                    <input type="date" id="enqDate" name="date">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="enqMessage">Message</label>
+                <textarea id="enqMessage" name="message" rows="5" placeholder="Provide details about your enquiry" required minlength="10"></textarea>
+            </div>
+
+            <input type="submit" value="Send Enquiry" class="submit-btn">
+        </form>
+
+        <div id="enquiryResult" class="text-left" aria-live="polite" style="margin-top: 1rem;"></div>
+    </div>
+
+    <footer>
+        <p>Copyright @ 2023 Fresh Wave</p>
+    </footer>
+</body>
+</html>

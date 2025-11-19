@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Disallow admin or private paths if added in the future
+# Disallow: /admin/
+# Disallow: /private/
+
+Sitemap: https://freshwavelaundry.com/sitemap.xml

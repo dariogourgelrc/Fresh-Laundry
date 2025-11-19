@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book Fresh Wave Laundry services online: choose wash & fold, dry cleaning, ironing, or pickup/delivery.">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Book Laundry, Online Booking, Wash and Fold, Dry Cleaning, Ironing, Pickup Delivery">
+    <title>Fresh Wave Laundry - Book Now</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="canonical" href="https://freshwavelaundry.com/booknow.html">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+    <meta property="og:title" content="Book Now - Fresh Wave Laundry">
+    <meta property="og:description" content="Schedule laundry services online: wash & fold, dry cleaning, ironing, and pickup/delivery.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://freshwavelaundry.com/booknow.html">
+    <meta property="og:image" content="https://freshwavelaundry.com/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book Now - Fresh Wave Laundry">
+    <meta name="twitter:description" content="Book laundry services online in Cape Town.">
+    <meta name="twitter:image" content="https://freshwavelaundry.com/images/logo.png">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer crossorigin="anonymous"></script>
+    <script src="./js/script.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Book Laundry Services",
+      "url": "https://freshwavelaundry.com/booknow.html",
+      "description": "Online booking for wash & fold, dry cleaning, ironing, and pickup/delivery services."
+    }
+    </script>
+</head>
+<body>
+    <header>
+            <img src="./images/logo.png" alt="logo" class="header-logo" width="200px" loading="lazy" decoding="async">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="booknow.html">Book Now</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+        </nav>
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
+    <div class="booking-container">
+        <h1 class="booking-title">Book Your Service</h1>
+        <form class="booking-form" action="">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="numero">Phone Number</label>
+                <input type="number" id="numero" name="numero" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Select Services:</label>
+                <div class="services-options">
+                    <div class="service-option">
+                        <input type="radio" id="washnfold" name="service" value="washnfold">
+                        <label for="washnfold">Wash & Fold</label>
+                    </div>
+                    <div class="service-option">
+                        <input type="radio" id="drycleaning" name="service" value="drycleaning">
+                        <label for="drycleaning">Dry Cleaning</label>
+                    </div>
+                    <div class="service-option">
+                        <input type="radio" id="ironing" name="service" value="ironing">
+                        <label for="ironing">Ironing</label>
+                    </div>
+                    <div class="service-option">
+                        <input type="radio" id="picndelivery" name="service" value="picndelivery">
+                        <label for="picndelivery">Pickup & Delivery</label>
+                    </div>
+                    <div class="service-option">
+                        <input type="radio" id="bedding" name="service" value="bedding">
+                        <label for="bedding">Bedding</label>
+                    </div>
+                    <div class="service-option">
+                        <input type="radio" id="eco" name="service" value="eco">
+                        <label for="eco">Eco-Friendly Options</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Choose Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="time">Choose Time</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            
+            <input type="submit" value="Book Service" class="submit-btn">
+            <div id="bookingResult" aria-live="polite" style="margin-top: 12px;"></div>
+        </form>
+    </div>
+    
+    <footer>
+        <p>Copyright @ 2023 Fresh Wave</p>
+    </footer>
+</body>
+</html>

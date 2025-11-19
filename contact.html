@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Fresh Wave Laundry in Cape Town for questions, hours, and location. Get in touch or find us on the map.">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Contact Laundry, Fresh Wave Laundry Contact, Cape Town Laundry Contact, Map, Hours">
+    <title>Fresh Wave Laundry - Contact Us</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="canonical" href="https://freshwavelaundry.com/contact.html">
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin>
+    <meta property="og:title" content="Contact - Fresh Wave Laundry">
+    <meta property="og:description" content="Reach Fresh Wave Laundry for support, hours, and location.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://freshwavelaundry.com/contact.html">
+    <meta property="og:image" content="https://freshwavelaundry.com/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact - Fresh Wave Laundry">
+    <meta name="twitter:description" content="Contact our Cape Town laundry team.">
+    <meta name="twitter:image" content="https://freshwavelaundry.com/images/logo.png">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer crossorigin="anonymous"></script>
+    <script src="./js/script.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Fresh Wave Laundry",
+      "url": "https://freshwavelaundry.com/contact.html",
+      "description": "Contact details, hours, and location for Fresh Wave Laundry in Cape Town."
+    }
+    </script>
+</head>
+<body>
+    <header>
+            <img src="./images/logo.png" alt="logo" class="header-logo" width="200px" loading="lazy" decoding="async">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="booknow.html">Book Now</a>
+            <a href="tracking.html">Tracking</a>
+            <a href="contact.html">Contact</a>
+            <a href="enquiry.html">Enquiry</a>
+        </nav>
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
+    <div class="contact-container">
+        <h1 class="contact-title">Contact Us</h1>
+        <div class="contact-info">
+            <p><strong>Address:</strong> 123 Main Street, Cape Town, South Africa</p>
+            <p><strong>Email:</strong> info@freshwavelaundry.co.za</p>
+            <p><strong>Phone:</strong> +27 21 123 4567</p>
+            <h2>Social Media</h2>
+            <div class="social-links">
+            <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+        </div>
+        <h2>Send Us a Message</h2>
+        <form id="contactForm" class="booking-form" novalidate>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="ctName">Full Name</label>
+                    <input type="text" id="ctName" name="name" placeholder="e.g., John Smith" required minlength="2">
+                </div>
+                <div class="form-group">
+                    <label for="ctEmail">Email</label>
+                    <input type="email" id="ctEmail" name="email" placeholder="e.g., john@example.com" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="ctPhone">Phone Number</label>
+                    <input type="tel" id="ctPhone" name="phone" placeholder="e.g., +27 72 000 0000" required>
+                </div>
+                <div class="form-group">
+                    <label for="ctType">Message Type</label>
+                    <select id="ctType" name="type" required>
+                        <option value="">Select a type</option>
+                        <option value="general">General</option>
+                        <option value="support">Support</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ctMessage">Message</label>
+                <textarea id="ctMessage" name="message" rows="5" placeholder="Type your full message here" required minlength="10"></textarea>
+            </div>
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+
+        <div id="contactResult" class="text-left" aria-live="polite" style="margin-top: 1rem;"></div>
+        <p id="composeWrap" style="display:none;margin-top:0.5rem;">
+          <a id="composeEmail" class="btn" href="#">Compose Email</a>
+        </p>
+    </div>
+    
+    <footer>
+        <p>Copyright @ 2023 Fresh Wave</p>
+    </footer>
+</body>
+</html>
