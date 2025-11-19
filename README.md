@@ -80,6 +80,23 @@ Initial Version (Week 1-2): Completed project planning, requirements, and wirefr
 
 Planned Updates: Add interactivity (JavaScript), deploy to Netlify, and integrate booking form.
 
+Change Log (current branch)
+
+- Repository migration: moved to a new repository because the old one did not allow pushes. Reinitialized the project and continued work here.
+- Applying jQuery framework to JS: refactored interactions to jQuery (hamburger menu, lightbox, services module, and form handlers).
+- Adding tabs functionalities into pricing page: implemented tabbed pricing UI with accessible states.
+- Adding gallery lightbox: added image lightbox overlay with keyboard support and overlay close behavior.
+- Adding filter and sort content to services page: dynamic services list with search, filter, and sort controls.
+- Applying on‑page SEO: added meta descriptions, canonical links, social/OG/Twitter tags, and structured data.
+- Applying off‑page SEO and additional assets: added `robots.txt`, `sitemap.xml`, and improved sharing previews.
+- Reviews: added new images and unified photo styling for consistency.
+- Changing hero and reviews images: updated homepage hero and review images.
+- Add enquiry: created Enquiry page with form, validation, and success feedback.
+- Adding feedback to Book Now: implemented booking confirmation feedback, inline validation, and toasts for Book Now buttons.
+- Tracking: added tracking form with validation (order code and optional email) and clear status feedback messages.
+
+
+
 Budget
 
 Website Development (Handwork): R8000 (one-time)
